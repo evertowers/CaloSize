@@ -10,10 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Map;
+
 public class RegistrationActivity extends AppCompatActivity {
 
     private EditText eRegName;
-    private EditText eRegEmail;
+    private EditText eNewPassword;
     private EditText eRegPassword;
     private Button eRegister;
 
@@ -29,42 +31,58 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         eRegName = findViewById(R.id.etRegName);
-        eRegEmail = findViewById(R.id.etRegEmail);
+        eNewPassword = findViewById(R.id.etNewPassword);
         eRegPassword = findViewById(R.id.etRegPassword);
         eRegister = findViewById(R.id.etRegButton);
+
+        credentials = new Credentials();
 
         sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
         sharedPreferencesEditor = sharedPreferences.edit();
 
+        if(sharedPreferences != null){
 
+            Map<String, ?> preferencesMap = sharedPreferences.getAll();
+
+            if(preferencesMap.size() != 0){
+                credentials.loadCredentials(preferencesMap);
+            }
+
+        }
 
         eRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String regName = eRegName.getText().toString();
-                String regEmail = eRegEmail.getText().toString();
+                String regNewPassword = eNewPassword.getText().toString();
                 String regPassword = eRegPassword.getText().toString();
 
-                if (validate(regName, regPassword)){
-                    credentials = new Credentials(regName, regPassword);
-                    sharedPreferencesEditor.putString("Username", regName);
-                    sharedPreferencesEditor.putString("Password", regPassword);
+                if (validate(regName, regPassword, regNewPassword)){
+                    if (!regPassword.equals(regNewPassword)){
+                        Toast.makeText(RegistrationActivity.this,"Password did not match", Toast.LENGTH_SHORT).show();
+                    }else if(credentials.checkUsername(regName)){
+                        Toast.makeText(RegistrationActivity.this,"Username already taken", Toast.LENGTH_SHORT).show();
+                    }else {
+                        credentials.addCredentials(regName, regPassword);
+                        sharedPreferencesEditor.putString(regName, regPassword);
+                        sharedPreferencesEditor.apply();
 
-                    sharedPreferencesEditor.apply();
 
+                        Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(RegistrationActivity.this, com.example.calosize.MainActivity.class);
-                    startActivity(intent);
-                    Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
 
     }
 
-    private boolean validate(String username, String password){
+    private boolean validate(String username, String password, String newPassword){
 
-        if (username.isEmpty() || password.length() < 8){
+        if (username.isEmpty() || password.length() < 8 || newPassword.length()<8){
             Toast.makeText(this, "Please enter all details. Password should be at least 8 characters.", Toast.LENGTH_SHORT).show();
             return false;
         }

@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Map;
+
 import static android.graphics.Color.BLUE;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isValid = false;
     private int counter = 5;
+
+    public Credentials credentials;
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor sharedPreferencesEditor;
@@ -43,14 +47,21 @@ public class MainActivity extends AppCompatActivity {
         eRegister = findViewById(R.id.tvRegister);
         eRememberMe = findViewById(R.id.cbRememberMe);
 
+        credentials = new Credentials();
+
         sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
         sharedPreferencesEditor = sharedPreferences.edit();
 
         if(sharedPreferences != null){
-            String savedUsername = sharedPreferences.getString("Username", "");
-            String savedPassword = sharedPreferences.getString("Password", "");
 
-            RegistrationActivity.credentials = new Credentials(savedUsername, savedPassword);
+            Map<String, ?> preferencesMap = sharedPreferences.getAll();
+
+            if(preferencesMap.size() != 0){
+                credentials.loadCredentials(preferencesMap);
+            }
+
+            String savedUsername = sharedPreferences.getString("LastSavedUsername", "");
+            String savedPassword = sharedPreferences.getString("LastSavedPassword", "");
 
             if(sharedPreferences.getBoolean("RememberMeCheckbox", false)){
                 eName.setText(savedUsername);
@@ -103,7 +114,10 @@ public class MainActivity extends AppCompatActivity {
                     else {
                         Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
 
+                        sharedPreferencesEditor.putString("LastSavedUsername", inputName);
+                        sharedPreferencesEditor.putString("LastSavedPassword", inputPassword);
 
+                        sharedPreferencesEditor.apply();
 
                         Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
                         startActivity(intent);
@@ -116,13 +130,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean validate(String name, String password){
-
-        if (RegistrationActivity.credentials != null){
-            if (name.equals(RegistrationActivity.credentials.getUsername()) && (password.equals(RegistrationActivity.credentials.getPassword()))){
-                return false;
-            }
-        }
-
-        return true;
+        return credentials.verifyCredentials(name, password);
     }
 }
