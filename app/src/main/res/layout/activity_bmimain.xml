@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    tools:context=".BMIMainActivity">
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="80sp"
+        android:background="@drawable/bmilogo">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="128dp"
+        android:text="@string/bmi"
+        android:textSize="31sp"
+        android:textColor="@color/white1"
+        android:fontFamily="@font/opensans_bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="190dp"
+        android:text="@string/calculator"
+        android:textSize="30sp"
+        android:textColor="@color/white1"
+        android:fontFamily="@font/opensans_regular">
+    </TextView>
+
+
+    <RelativeLayout
+        android:layout_width="178dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/notclicked_layout"
+        android:id="@+id/layout_male">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/male"
+            android:id="@+id/logo_male">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="65dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/male"
+            android:textSize="25sp"
+            android:textColor="@color/black1"
+            android:fontFamily="@font/opensans_regular"
+            android:id="@+id/text_male">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="178dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="203dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/notclicked_layout"
+        android:id="@+id/layout_female">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/female"
+            android:id="@+id/logo_female">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="68dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/female"
+            android:textSize="25sp"
+            android:textColor="@color/black1"
+            android:fontFamily="@font/opensans_regular"
+            android:id="@+id/text_female">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_male"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle_layout"
+        android:id="@+id/layout_age">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/age"
+            android:textSize="25sp"
+            android:textColor="@color/black1"
+            android:fontFamily="@font/opensans_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/display_age"
+            android:textSize="60sp"
+            android:textColor="@color/dark_green"
+            android:fontFamily="@font/opensans_bold"
+            android:id="@+id/number_age"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:thumbTint="@color/seekbar"
+            android:id="@+id/seekbar_age"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/layout_age"
+        android:background="@drawable/rectangle_layout"
+        android:id="@+id/layout_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/height"
+            android:textSize="25sp"
+            android:textColor="@color/black1"
+            android:fontFamily="@font/opensans_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/display_height"
+            android:textSize="60sp"
+            android:textColor="@color/dark_green"
+            android:fontFamily="@font/opensans_bold"
+            android:id="@+id/number_height"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/unit_height"
+            android:textSize="30sp"
+            android:textColor="@color/dark_green"
+            android:fontFamily="@font/opensans_regular"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:thumbTint="@color/seekbar"
+            android:id="@+id/seekbar_height"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/layout_height"
+        android:background="@drawable/rectangle_layout"
+        android:id="@+id/layout_weight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/weight"
+            android:textSize="25sp"
+            android:textColor="@color/black1"
+            android:fontFamily="@font/opensans_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/display_weight"
+            android:textSize="60sp"
+            android:textColor="@color/dark_green"
+            android:fontFamily="@font/opensans_bold"
+            android:id="@+id/number_weight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/unit_weight"
+            android:textSize="30sp"
+            android:textColor="@color/dark_green"
+            android:fontFamily="@font/opensans_regular"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:thumbTint="@color/seekbar"
+            android:id="@+id/seekbar_weight"/>
+
+    </RelativeLayout>
+
+    <android.widget.Button
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="675dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/calculate_bmi"
+        android:textSize="25sp"
+        android:textColor="@color/white1"
+        android:fontFamily="@font/opensans_bold"
+        android:background="@drawable/calculate_layout"
+        android:id="@+id/layout_calculate">
+    </android.widget.Button>
+
+
+</RelativeLayout>
