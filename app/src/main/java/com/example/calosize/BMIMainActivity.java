@@ -28,7 +28,6 @@ public class BMIMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmimain);
-        getSupportActionBar().hide();
 
         bmicalculate = findViewById(R.id.layout_calculate);
         input_age = findViewById(R.id.number_age);

@@ -11,7 +11,6 @@
         android:theme="@style/Theme.CaloSize">
         <activity android:name=".BMIResult"></activity>
         <activity android:name=".BMIMainActivity"/>
-        <activity android:name=".BMILogo"/>
         <activity android:name=".CalorieCalculator"/>
         <activity android:name=".HomePageActivity"/>
         <activity android:name=".RegistrationActivity"/>

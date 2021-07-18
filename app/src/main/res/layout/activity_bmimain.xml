@@ -142,6 +142,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:progressBackgroundTint="@color/light_green"
             android:thumbTint="@color/seekbar"
             android:id="@+id/seekbar_age"/>
 
@@ -196,6 +197,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:progressBackgroundTint="@color/light_green"
             android:thumbTint="@color/seekbar"
             android:id="@+id/seekbar_height"/>
 
@@ -250,6 +252,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:progressBackgroundTint="@color/light_green"
             android:thumbTint="@color/seekbar"
             android:id="@+id/seekbar_weight"/>
 

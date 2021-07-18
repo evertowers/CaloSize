@@ -2,6 +2,7 @@ package com.example.calosize;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static android.graphics.Color.BLUE;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText eName;
@@ -20,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView eAttempts;
     private TextView eRegister;
     private CheckBox eRememberMe;
-
 
     boolean isValid = false;
     private int counter = 5;
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         eAttempts = findViewById(R.id.tvAttempts);
         eRegister = findViewById(R.id.tvRegister);
         eRememberMe = findViewById(R.id.cbRememberMe);
-
 
         sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
         sharedPreferencesEditor = sharedPreferences.edit();
@@ -75,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
             }
         });
-
 
         eLogin.setOnClickListener(new View.OnClickListener() {
             @Override

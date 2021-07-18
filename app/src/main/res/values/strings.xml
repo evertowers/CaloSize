@@ -3,16 +3,16 @@
     <string name="enter_name">Enter Name</string>
 
     <string name="section_name">CaloSize</string>
-    <string name="sex">Sex:</string>
+    <string name="sex">SEX:</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
-    <string name="weight">Weight:</string>
+    <string name="weight">WEIGHT:</string>
     <string name="in_kilogram">in kilogram</string>
-    <string name="height">Height:</string>
+    <string name="height">HEIGHT:</string>
     <string name="in_centimeter">in centimeter</string>
-    <string name="age">Age:</string>
+    <string name="age">AGE:</string>
     <string name="in_years">in years</string>
-    <string name="activity">Activity:</string>
+    <string name="activity">ACTIVITY:</string>
     <string name="calculate">CALCULATE</string>
     <string name="clear">CLEAR</string>
     <string name="result">RESULT:</string>
