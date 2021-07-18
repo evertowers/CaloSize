@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaloSize">
-        <activity android:name=".UnderMaintenance"></activity>
-        <activity android:name=".BMIResult"/>
-        <activity android:name=".BMIMainActivity"/>
-        <activity android:name=".CalorieCalculator"/>
-        <activity android:name=".HomePageActivity"/>
-        <activity android:name=".RegistrationActivity"/>
+        <activity android:name=".YourProfile"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".UnderMaintenance" />
+        <activity android:name=".BMIResult" />
+        <activity android:name=".BMIMainActivity" />
+        <activity android:name=".CalorieCalculator" />
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

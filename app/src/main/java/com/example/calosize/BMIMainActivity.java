@@ -2,14 +2,18 @@ package com.example.calosize;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BMIMainActivity extends AppCompatActivity {
 
@@ -38,7 +42,6 @@ public class BMIMainActivity extends AppCompatActivity {
         scroll_weight = findViewById(R.id.seekbar_weight);
         choice_male = findViewById(R.id.layout_male);
         choice_female = findViewById(R.id.layout_female);
-
 
         choice_male.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,6 +159,32 @@ public class BMIMainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.dashboard);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.your_profile:
+                        startActivity(new Intent(getApplicationContext(), YourProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(), Settings.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.dashboard:
+                        return true;
+
+                }
+                return false;
             }
         });
     }

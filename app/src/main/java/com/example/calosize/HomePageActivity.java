@@ -16,6 +16,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class HomePageActivity extends AppCompatActivity {
 
     private Button toCalo;
@@ -33,6 +35,32 @@ public class HomePageActivity extends AppCompatActivity {
         toCalo = findViewById(R.id.btCalo);
         toBmi = findViewById(R.id.btBmi);
         greeting = findViewById(R.id.tvGreeting);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.dashboard);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.your_profile:
+                        startActivity(new Intent(getApplicationContext(), YourProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(), Settings.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.dashboard:
+                        return true;
+
+                }
+                return false;
+            }
+        });
 
         sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
         sharedPreferencesEditor = sharedPreferences.edit();
