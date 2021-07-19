@@ -19,6 +19,7 @@
         android:hint="New Password"
         android:inputType="textPassword"
         android:textColorHint="@color/white1"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -66,6 +67,7 @@
         android:hint="Name"
         android:inputType="textPersonName"
         android:textColorHint="@color/white1"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -84,6 +86,7 @@
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColorHint="@color/white1"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -93,14 +96,27 @@
 
     <Button
         android:id="@+id/etRegButton"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_width="191dp"
+        android:layout_height="52dp"
         android:layout_marginTop="45dp"
-        android:text="Create Account"
-        android:fontFamily="@font/opensans_regular"
         android:background="@drawable/calculate_layout"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Create Account"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRegPassword" />
+
+    <TextView
+        android:id="@+id/tvAlreadySign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Already Sign Up? Log in"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
