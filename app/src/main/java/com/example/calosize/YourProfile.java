@@ -1,8 +1,10 @@
 package com.example.calosize;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -65,10 +67,53 @@ public class YourProfile extends AppCompatActivity {
         String pBMIRes = sharedPreferences.getString("BMIResult","");
         String pBMIEqui = sharedPreferences.getString("BMIEquivalent", "");
 
-        calIntakeResult.setText(pCalRes);
         userName.setText(pUser);
+        calIntakeResult.setText(pCalRes);
         bmiResultNum.setText(pBMIRes);
         bmiResultEqui.setText(pBMIEqui);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder
+                = new AlertDialog
+                .Builder(YourProfile.this);
+
+        builder.setMessage("Do you want to exit?");
+        builder.setTitle("Alert!");
+        builder.setCancelable(false);
+        builder
+                .setPositiveButton(
+                        "Yes",
+                        new DialogInterface
+                                .OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+                                Intent a = new Intent(Intent.ACTION_MAIN);
+                                a.addCategory(Intent.CATEGORY_HOME);
+                                a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(a);
+                            }
+                        });
+        builder
+                .setNegativeButton(
+                        "No",
+                        new DialogInterface
+                                .OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+                                dialog.cancel();
+                            }
+                        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
 }

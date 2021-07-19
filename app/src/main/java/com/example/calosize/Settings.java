@@ -1,8 +1,10 @@
 package com.example.calosize;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,6 +19,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 
 public class Settings extends AppCompatActivity {
+
+
 
     ListView listView;
 
@@ -69,10 +73,85 @@ public class Settings extends AppCompatActivity {
                     Intent intent = new Intent(Settings.this, AboutUs.class);
                     Settings.this.startActivity(intent);
                 } else if (position == 1) {
-                    Intent intent = new Intent(Settings.this, MainActivity.class);
-                    Settings.this.startActivity(intent);
+                    AlertDialog.Builder builder
+                            = new AlertDialog
+                            .Builder(Settings.this);
+
+                    builder.setMessage("Logging out means you will lose your data. Do you want to log out?");
+                    builder.setTitle("Alert!");
+                    builder.setCancelable(false);
+                    builder
+                            .setPositiveButton(
+                                    "Yes",
+                                    new DialogInterface
+                                            .OnClickListener() {
+
+                                        @Override
+                                        public void onClick(DialogInterface dialog,
+                                                            int which)
+                                        {
+                                            Intent intent = new Intent(Settings.this, MainActivity.class);
+                                            Settings.this.startActivity(intent);
+                                        }
+                                    });
+                    builder
+                            .setNegativeButton(
+                                    "No",
+                                    new DialogInterface
+                                            .OnClickListener() {
+
+                                        @Override
+                                        public void onClick(DialogInterface dialog,
+                                                            int which)
+                                        {
+                                            dialog.cancel();
+                                        }
+                                    });
+                    AlertDialog alertDialog = builder.create();
+                    alertDialog.show();
                 }
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder
+                = new AlertDialog
+                .Builder(Settings.this);
+
+        builder.setMessage("Do you want to exit?");
+        builder.setTitle("Alert!");
+        builder.setCancelable(false);
+        builder
+                .setPositiveButton(
+                        "Yes",
+                        new DialogInterface
+                                .OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+                                Intent a = new Intent(Intent.ACTION_MAIN);
+                                a.addCategory(Intent.CATEGORY_HOME);
+                                a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(a);
+                            }
+                        });
+        builder
+                .setNegativeButton(
+                        "No",
+                        new DialogInterface
+                                .OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+                                dialog.cancel();
+                            }
+                        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }

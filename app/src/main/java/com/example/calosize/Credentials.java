@@ -8,9 +8,9 @@ public class Credentials {
 
     public void addCredentials(String username, String password, String calResult, String bmiResult, String bmiEqui){
         credentialsMapper.put(username, password);
-        credentialsMapper.put(username, calResult);
-        credentialsMapper.put(username, bmiResult);
-        credentialsMapper.put(username, bmiEqui);
+        credentialsMapper.put(password, calResult);
+        credentialsMapper.put(calResult, bmiResult);
+        credentialsMapper.put(bmiResult, bmiEqui);
     }
 
 
@@ -34,4 +34,6 @@ public class Credentials {
             }
         }
     }
+
+
 }
