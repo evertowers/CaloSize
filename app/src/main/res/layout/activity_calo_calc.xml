@@ -8,6 +8,26 @@
     app:errorEnabled="true"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btSaveData"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/calculate_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/opensans_bold"
+        android:text="SAVE DATA"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:backgroundTint="@color/dark_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.713" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -442,6 +462,7 @@
         android:text="@string/clear"
         android:textAlignment="center"
         android:textSize="25sp"
+        app:backgroundTint="@color/dark_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"

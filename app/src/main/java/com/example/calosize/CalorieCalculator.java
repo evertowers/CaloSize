@@ -35,6 +35,12 @@ public class CalorieCalculator extends AppCompatActivity {
     private TextView textview_label;
     private RadioGroup sexRadioGroup;
     private Spinner mySpinner;
+    private Button saveData;
+
+    public static Credentials credentials;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor sharedPreferencesEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +56,7 @@ public class CalorieCalculator extends AppCompatActivity {
         textview_label = findViewById(R.id.label);
         sexRadioGroup = findViewById(R.id.radioGroup);
         mySpinner = findViewById(R.id.spinner);
+        saveData = findViewById(R.id.btSaveData);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.activity, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -256,6 +263,23 @@ public class CalorieCalculator extends AppCompatActivity {
 
                 }
                 return false;
+            }
+        });
+
+
+        saveData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
+                sharedPreferencesEditor = sharedPreferences.edit();
+
+                String calRes = textview_show.getText().toString();
+                sharedPreferencesEditor.putString("CalorieResult", calRes);
+
+                sharedPreferencesEditor.apply();
+
+                Toast.makeText(CalorieCalculator.this, "Result saved", Toast.LENGTH_SHORT).show();
             }
         });
 

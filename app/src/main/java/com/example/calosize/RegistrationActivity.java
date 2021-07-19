@@ -66,7 +66,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     }else if(credentials.checkUsername(regName)){
                         Toast.makeText(RegistrationActivity.this,"Username already taken", Toast.LENGTH_SHORT).show();
                     }else {
-                        credentials.addCredentials(regName, regPassword);
+                        credentials.addCredentials(regName, regPassword, "", "", "");
                         sharedPreferencesEditor.putString(regName, regPassword);
                         sharedPreferencesEditor.apply();
 

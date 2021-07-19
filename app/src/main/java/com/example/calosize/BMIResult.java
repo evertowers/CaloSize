@@ -2,13 +2,16 @@ package com.example.calosize;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +26,13 @@ public class BMIResult extends AppCompatActivity {
     float bmi_float, bmi_height, bmi_weight ;
     RelativeLayout bmi_color;
     Intent intent;
-    android.widget.Button bmirecalculate;
+    Button bmirecalculate;
+    Button saveBMIData;
+
+    public static Credentials credentials;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor sharedPreferencesEditor;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -38,6 +47,7 @@ public class BMIResult extends AppCompatActivity {
         bmi_color=findViewById(R.id.result_layout);
         result_img=findViewById(R.id.result_image);
         bmirecalculate=findViewById(R.id.layout_recalculate);
+        saveBMIData=findViewById(R.id.layout_save);
 
         height=intent.getStringExtra("height");
         bmi_height=Float.parseFloat(height);
@@ -84,6 +94,23 @@ public class BMIResult extends AppCompatActivity {
                 Intent intent = new Intent(BMIResult.this,BMIMainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        saveBMIData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
+                sharedPreferencesEditor = sharedPreferences.edit();
+
+                String bmiRes = result_bminum.getText().toString();
+                String bmiEqu = result_bmistr.getText().toString();
+                sharedPreferencesEditor.putString("BMIResult", bmiRes);
+                sharedPreferencesEditor.putString("BMIEquivalent", bmiEqu);
+
+                sharedPreferencesEditor.apply();
+
+                Toast.makeText(BMIResult.this, "Result saved", Toast.LENGTH_SHORT).show();
             }
         });
 

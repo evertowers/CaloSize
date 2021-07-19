@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
                         sharedPreferencesEditor.putString("LastSavedUsername", inputName);
                         sharedPreferencesEditor.putString("LastSavedPassword", inputPassword);
+                        sharedPreferencesEditor.putString("CalorieResult", "");
 
                         sharedPreferencesEditor.apply();
 

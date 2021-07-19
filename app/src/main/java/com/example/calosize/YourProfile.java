@@ -14,6 +14,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class YourProfile extends AppCompatActivity {
 
     private TextView calIntakeResult;
+    private TextView userName;
+    private TextView bmiResultNum;
+    private TextView bmiResultEqui;
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor sharedPreferencesEditor;
@@ -48,6 +51,24 @@ public class YourProfile extends AppCompatActivity {
                 return false;
             }
         });
+
+        calIntakeResult = findViewById(R.id.profileCalorie);
+        userName = findViewById(R.id.profileUsername);
+        bmiResultNum = findViewById(R.id.profileBMI);
+        bmiResultEqui = findViewById(R.id.profileBMIEquivalent);
+
+        sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
+        sharedPreferencesEditor = sharedPreferences.edit();
+
+        String pCalRes = sharedPreferences.getString("CalorieResult", "");
+        String pUser = sharedPreferences.getString("LastSavedUsername", "");
+        String pBMIRes = sharedPreferences.getString("BMIResult","");
+        String pBMIEqui = sharedPreferences.getString("BMIEquivalent", "");
+
+        calIntakeResult.setText(pCalRes);
+        userName.setText(pUser);
+        bmiResultNum.setText(pBMIRes);
+        bmiResultEqui.setText(pBMIEqui);
 
     }
 }
