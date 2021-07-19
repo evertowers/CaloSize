@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText eNewPassword;
     private EditText eRegPassword;
     private Button eRegister;
+    private TextView alreadySignUp;
 
     public static Credentials credentials;
 
@@ -34,6 +36,7 @@ public class RegistrationActivity extends AppCompatActivity {
         eNewPassword = findViewById(R.id.etNewPassword);
         eRegPassword = findViewById(R.id.etRegPassword);
         eRegister = findViewById(R.id.etRegButton);
+        alreadySignUp = findViewById(R.id.tvAlreadySign);
 
         credentials = new Credentials();
 
@@ -75,6 +78,14 @@ public class RegistrationActivity extends AppCompatActivity {
                     }
 
                 }
+            }
+        });
+
+        alreadySignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
