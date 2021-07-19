@@ -7,6 +7,7 @@
     android:background="#EFEFE8"
     tools:context=".BMIResult">
 
+    
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -47,7 +48,6 @@
         android:fontFamily="@font/opensans_regular">
     </TextView>
 
-
     <RelativeLayout
         android:id="@+id/result_layout"
         android:layout_width="match_parent"
@@ -68,7 +68,6 @@
             android:textSize="35sp">
         </TextView>
 
-
         <ImageView
             android:id="@+id/result_image"
             android:layout_width="150dp"
@@ -78,7 +77,6 @@
             android:padding="15dp"
             android:src="@drawable/body">
         </ImageView>
-
 
         <TextView
             android:id="@+id/result_text1"
@@ -91,7 +89,6 @@
             android:textColor="#000000"
             android:textSize="40sp">
         </TextView>
-
 
         <TextView
             android:id="@+id/result_text2"
@@ -117,7 +114,7 @@
         android:text="@string/recalculate_bmi"
         android:textSize="20sp"
         android:textColor="#EFEFE8"
-        android:fontFamily="@font/opensans_semibold"
+        android:fontFamily="@font/opensans_bold"
         android:id="@+id/layout_recalculate">
     </android.widget.Button>
 
@@ -130,9 +127,8 @@
         android:text="@string/save_bmi"
         android:textSize="20sp"
         android:textColor="#EFEFE8"
-        android:fontFamily="@font/opensans_semibold"
+        android:fontFamily="@font/opensans_bold"
         android:id="@+id/layout_save">
     </android.widget.Button>
-
 
 </RelativeLayout>
