@@ -117,7 +117,7 @@
         android:text="@string/recalculate_bmi"
         android:textSize="20sp"
         android:textColor="#EFEFE8"
-        android:fontFamily="@font/opensans_bold"
+        android:fontFamily="@font/opensans_semibold"
         android:id="@+id/layout_recalculate">
     </android.widget.Button>
 
@@ -130,7 +130,7 @@
         android:text="@string/save_bmi"
         android:textSize="20sp"
         android:textColor="#EFEFE8"
-        android:fontFamily="@font/opensans_bold"
+        android:fontFamily="@font/opensans_semibold"
         android:id="@+id/layout_save">
     </android.widget.Button>
 
