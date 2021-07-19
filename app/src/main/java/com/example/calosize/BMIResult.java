@@ -24,8 +24,6 @@ public class BMIResult extends AppCompatActivity {
     RelativeLayout bmi_color;
     Intent intent;
     android.widget.Button bmirecalculate;
-    android.widget.Button bmigoback;
-
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -40,7 +38,6 @@ public class BMIResult extends AppCompatActivity {
         bmi_color=findViewById(R.id.result_layout);
         result_img=findViewById(R.id.result_image);
         bmirecalculate=findViewById(R.id.layout_recalculate);
-        bmigoback=findViewById(R.id.layout_goback);
 
         height=intent.getStringExtra("height");
         bmi_height=Float.parseFloat(height);
@@ -85,15 +82,6 @@ public class BMIResult extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BMIResult.this,BMIMainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        bmigoback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BMIResult.this, HomePageActivity.class);
                 startActivity(intent);
                 finish();
             }

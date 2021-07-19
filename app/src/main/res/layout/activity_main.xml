@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/calculate_layout"
-        android:fontFamily="@font/opensans_regular"
+        android:fontFamily="@font/opensans_semibold"
         android:text="Login"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"

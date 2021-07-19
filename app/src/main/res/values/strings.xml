@@ -42,6 +42,7 @@
     <string name="unit_weight">kg</string>
     <string name="calculate_bmi">Calculate your BMI</string>
     <string name="recalculate_bmi">Recalculate your BMI</string>
+    <string name="save_bmi">SAVE</string>
     <string name="go_back">Go Back</string>
     <string name="result_text2">0</string>
 

@@ -2,6 +2,7 @@ package com.example.calosize;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
@@ -56,6 +57,8 @@ public class CalorieCalculator extends AppCompatActivity {
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                ((TextView)mySpinner.getChildAt(0)).setTextColor(Color.rgb(10, 94, 42));
 
                 // Calculate Button
                 Button calculate = findViewById(R.id.btCalo);

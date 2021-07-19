@@ -23,7 +23,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btBmi"
         app:layout_constraintVertical_bias="1.0" />
 
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -34,7 +33,7 @@
         android:textSize="52sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
@@ -49,28 +48,11 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
         tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="288dp"
-        android:layout_height="111dp"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/opensans_regular"
-        android:text="CALORIE CALCULATOR"
-        android:textAlignment="center"
-        android:textColor="@color/white1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
 
     <TextView
         android:id="@+id/tvGreeting"
@@ -82,30 +64,43 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.157" />
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="220dp"
+        android:background="@drawable/homepage_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.365">
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="229dp"
-        android:layout_height="103dp"
-        android:fontFamily="@font/opensans_regular"
-        android:text="BMI CALCULATOR"
+        android:id="@+id/tvWelcome"
+        android:layout_width="275dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="CALORIE CALCULATOR"
         android:textAlignment="center"
-        android:textColor="@color/white1"
+        android:textColor="@color/dark_green"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
-
+        app:layout_constraintVertical_bias="0.330" />
     <Button
         android:id="@+id/btCalo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:background="@drawable/calculate_layout"
         android:text="Enter"
         android:textSize="20dp"
@@ -115,6 +110,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
         app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="220dp"
+        android:background="@drawable/homepage_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833">
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="229dp"
+        android:layout_height="103dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="BMI CALCULATOR"
+        android:textAlignment="center"
+        android:textColor="@color/dark_green"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
 
     <Button
         android:id="@+id/btBmi"

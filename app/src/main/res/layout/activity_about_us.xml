@@ -52,6 +52,18 @@
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/menu_navigation" />
 
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="550dp"
+        android:background="@drawable/calculate_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569">
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/tvAboutUs"
         android:layout_width="wrap_content"
@@ -68,10 +80,10 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="315dp"
-        android:layout_height="122dp"
+        android:layout_width="318dp"
+        android:layout_height="155dp"
         android:layout_marginTop="52dp"
-        android:text="We are Computer Engineering students form Polytechnic University of the Philippines. This application is made in compliance for our Final project in CET 4."
+        android:text="We are Computer Engineering students form Polytechnic University of the Philippines. This application is made in compliance for our Final project in Computer Engineering Technology 4."
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
-        android:text="Developers:"
+        android:text="Developers"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Del Prado, Kris Anne M."
+        android:text="Kris Anne M. Del Prado"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +125,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delambaca, Erica O."
+        android:text="Erica O. Delambaca"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +138,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Torres, Everly C."
+        android:text="Everly C. Torres"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

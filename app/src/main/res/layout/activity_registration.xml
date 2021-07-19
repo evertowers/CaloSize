@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:text="Create Account"
-        android:fontFamily="@font/opensans_regular"
+        android:fontFamily="@font/opensans_semibold"
         android:background="@drawable/calculate_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -57,73 +57,73 @@
 
 
     <RelativeLayout
+        android:id="@+id/layout_female"
         android:layout_width="178dp"
         android:layout_height="110dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="203dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/notclicked_layout"
-        android:id="@+id/layout_male">
+        android:background="@drawable/notclicked_layout">
 
         <ImageView
+            android:id="@+id/logo_female"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginStart="10dp"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/male"
-            android:id="@+id/logo_male">
+            android:layout_marginStart="10dp"
+            android:background="@drawable/female">
         </ImageView>
 
         <TextView
+            android:id="@+id/text_female"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="85dp"
-            android:layout_marginTop="65dp"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:text="@string/male"
-            android:textSize="25sp"
-            android:textColor="@color/black1"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="68dp"
             android:fontFamily="@font/opensans_regular"
-            android:id="@+id/text_male">
+            android:text="@string/female"
+            android:textColor="@color/black1"
+            android:textSize="25sp">
         </TextView>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_male"
         android:layout_width="178dp"
         android:layout_height="110dp"
-        android:layout_marginStart="203dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/notclicked_layout"
-        android:id="@+id/layout_female">
+        android:background="@drawable/notclicked_layout">
 
         <ImageView
+            android:id="@+id/logo_male"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginStart="10dp"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/female"
-            android:id="@+id/logo_female">
+            android:layout_marginStart="10dp"
+            android:background="@drawable/male">
         </ImageView>
 
         <TextView
+            android:id="@+id/text_male"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="68dp"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="@string/female"
-            android:textSize="25sp"
-            android:textColor="@color/black1"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="65dp"
             android:fontFamily="@font/opensans_regular"
-            android:id="@+id/text_female">
+            android:text="@string/male"
+            android:textColor="@color/black1"
+            android:textSize="25sp">
         </TextView>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_age"
-        android:layout_width="360dp"
-        android:layout_height="120dp"
+        android:layout_width="370dp"
+        android:layout_height="135dp"
         android:layout_below="@id/layout_male"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/opensans_bold"
             android:text="@string/display_age"
             android:textColor="@color/dark_green"
@@ -159,16 +159,17 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:progressBackgroundTint="@color/light_green"
+            android:progressTint="@color/light_green"
             android:thumbTint="@color/seekbar" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_height"
-        android:layout_width="360dp"
-        android:layout_height="120dp"
+        android:layout_width="370dp"
+        android:layout_height="135dp"
         android:layout_below="@id/layout_age"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -191,7 +192,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/opensans_bold"
             android:text="@string/display_height"
             android:textColor="@color/dark_green"
@@ -201,7 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="250dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/opensans_regular"
             android:text="@string/unit_height"
             android:textColor="@color/dark_green"
@@ -214,16 +215,17 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:progressBackgroundTint="@color/light_green"
+            android:progressTint="@color/light_green"
             android:thumbTint="@color/seekbar" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_weight"
-        android:layout_width="360dp"
-        android:layout_height="120dp"
+        android:layout_width="370dp"
+        android:layout_height="135dp"
         android:layout_below="@id/layout_height"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -246,7 +248,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/opensans_bold"
             android:text="@string/display_weight"
             android:textColor="@color/dark_green"
@@ -256,7 +258,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="250dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/opensans_regular"
             android:text="@string/unit_weight"
             android:textColor="@color/dark_green"
@@ -269,24 +271,25 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:progressBackgroundTint="@color/light_green"
+            android:progressTint="@color/light_green"
             android:thumbTint="@color/seekbar" />
-
     </RelativeLayout>
 
     <android.widget.Button
         android:id="@+id/layout_calculate"
-        android:layout_width="380dp"
-        android:layout_height="50dp"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/layout_weight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/calculate_layout"
         android:fontFamily="@font/opensans_bold"
         android:text="@string/calculate_bmi"
         android:textColor="@color/white1"
-        android:textSize="25sp"></android.widget.Button>
+        android:textSize="25sp">
+    </android.widget.Button>
 
 
 </RelativeLayout>

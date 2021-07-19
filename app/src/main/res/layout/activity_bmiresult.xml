@@ -56,7 +56,6 @@
         android:layout_marginTop="68dp"
         android:background="#44CB17">
 
-
         <TextView
             android:id="@+id/result_text0"
             android:layout_width="wrap_content"
@@ -66,7 +65,8 @@
             android:fontFamily="@font/opensans_bold"
             android:text="RESULT"
             android:textColor="#000000"
-            android:textSize="35sp"></TextView>
+            android:textSize="35sp">
+        </TextView>
 
 
         <ImageView
@@ -76,7 +76,8 @@
             android:layout_below="@id/result_text0"
             android:layout_centerHorizontal="true"
             android:padding="15dp"
-            android:src="@drawable/body"></ImageView>
+            android:src="@drawable/body">
+        </ImageView>
 
 
         <TextView
@@ -88,7 +89,8 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/opensans_bold"
             android:textColor="#000000"
-            android:textSize="40sp"></TextView>
+            android:textSize="40sp">
+        </TextView>
 
 
         <TextView
@@ -101,7 +103,8 @@
             android:fontFamily="@font/opensans_bold"
             android:text="@string/result_text2"
             android:textColor="#000000"
-            android:textSize="80sp"></TextView>
+            android:textSize="70sp">
+        </TextView>
 
     </RelativeLayout>
 
@@ -109,12 +112,11 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-670dp"
-        android:layout_above="@id/layout_goback"
+        android:layout_marginTop="560dp"
         android:background="@drawable/recalculate_layout"
         android:text="@string/recalculate_bmi"
         android:textSize="20sp"
-        android:textColor="#000000"
+        android:textColor="#EFEFE8"
         android:fontFamily="@font/opensans_bold"
         android:id="@+id/layout_recalculate">
     </android.widget.Button>
@@ -123,13 +125,13 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="675dp"
+        android:layout_marginTop="615dp"
         android:background="@drawable/recalculate_layout"
-        android:text="@string/go_back"
+        android:text="@string/save_bmi"
         android:textSize="20sp"
-        android:textColor="#000000"
+        android:textColor="#EFEFE8"
         android:fontFamily="@font/opensans_bold"
-        android:id="@+id/layout_goback">
+        android:id="@+id/layout_save">
     </android.widget.Button>
 
 
