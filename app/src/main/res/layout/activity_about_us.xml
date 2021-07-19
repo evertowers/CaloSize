@@ -83,7 +83,7 @@
         android:layout_width="318dp"
         android:layout_height="155dp"
         android:layout_marginTop="52dp"
-        android:text="We are Computer Engineering students form Polytechnic University of the Philippines. This application is made in compliance for our Final project in Computer Engineering Technology 4."
+        android:text="We are Computer Engineering students from Polytechnic University of the Philippines. This application is made in compliance for our Final project in Computer Engineering Technology 4."
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

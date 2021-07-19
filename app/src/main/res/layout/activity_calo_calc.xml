@@ -9,26 +9,6 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/btSaveData"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/calculate_layout"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/opensans_bold"
-        android:text="SAVE DATA"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:backgroundTint="@color/dark_green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -372,7 +352,7 @@
 
     <Button
         android:id="@+id/btCalo"
-        android:layout_width="180dp"
+        android:layout_width="175dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/calculate_layout"
@@ -384,10 +364,29 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.060"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
+        app:layout_constraintVertical_bias="0.655" />
+
+    <Button
+        android:id="@+id/btSaveData"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/calculate_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/opensans_bold"
+        android:text="SAVE DATA"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.940"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
 
     <RelativeLayout
         android:layout_width="370dp"
@@ -463,7 +462,6 @@
         android:text="@string/clear"
         android:textAlignment="center"
         android:textSize="25sp"
-        app:backgroundTint="@color/dark_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
