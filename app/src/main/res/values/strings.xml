@@ -44,5 +44,6 @@
     <string name="recalculate_bmi">Recalculate your BMI</string>
     <string name="go_back">Go Back</string>
     <string name="result_text2">0</string>
+    <string name="todo">TODO</string>
 
 </resources>
