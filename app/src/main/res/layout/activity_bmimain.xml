@@ -55,7 +55,6 @@
         android:fontFamily="@font/opensans_regular">
     </TextView>
 
-
     <RelativeLayout
         android:id="@+id/layout_female"
         android:layout_width="178dp"
@@ -290,6 +289,5 @@
         android:textColor="@color/white1"
         android:textSize="25sp">
     </android.widget.Button>
-
 
 </RelativeLayout>
