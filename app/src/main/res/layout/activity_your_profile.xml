@@ -97,7 +97,7 @@
         app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileUsername"
-        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintVertical_bias="0.16"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -106,12 +106,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:fontFamily="@font/opensans_regular"
-        android:text="BMI: "
+        android:text="Body Mass Index:"
         android:textColor="#EFEFE8"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileCalorie"
         app:layout_constraintVertical_bias="0.0"
@@ -130,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileBMI"
-        app:layout_constraintVertical_bias="0.033"
+        app:layout_constraintVertical_bias="0.069"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/profileBMI"
@@ -171,6 +171,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
