@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     isValid = validate(inputName, inputPassword);
 
-                    if (isValid){
+                    if (!isValid){
                         counter--;
                         Toast.makeText(MainActivity.this, "Incorrect credentials.", Toast.LENGTH_SHORT).show();
 
