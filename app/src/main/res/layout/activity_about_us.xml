@@ -83,7 +83,8 @@
         android:id="@+id/textView6"
         android:layout_width="318dp"
         android:layout_height="155dp"
-        android:layout_marginTop="20dp"
+
+        android:layout_marginTop="52dp"
         android:text="We are Computer Engineering students from Polytechnic University of the Philippines. This application is made in compliance for our Final project in Computer Engineering Technology 4."
         android:textAlignment="center"
         android:textSize="21sp"
