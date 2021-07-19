@@ -45,6 +45,7 @@
         android:ems="12"
         android:hint="@string/enter_name"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
@@ -59,6 +60,7 @@
         android:ems="12"
         android:hint="Enter Password"
         android:inputType="textPassword"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
@@ -70,22 +72,23 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:text="Login"
-        android:fontFamily="@font/opensans_regular"
         android:background="@drawable/calculate_layout"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Login"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintTop_toBottomOf="@+id/cbRememberMe"
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/tvAttempts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No. of attempts remaining: 5"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,9 +101,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Create account here"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAttempts"
         app:layout_constraintVertical_bias="0.0" />
@@ -110,11 +115,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Remember Me"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.074" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

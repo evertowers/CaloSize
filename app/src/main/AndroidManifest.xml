@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaloSize">
-        <activity android:name=".YourProfile"></activity>
+        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".YourProfile" />
         <activity android:name=".Settings" />
         <activity android:name=".UnderMaintenance" />
         <activity android:name=".BMIResult" />

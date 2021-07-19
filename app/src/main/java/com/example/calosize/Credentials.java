@@ -10,6 +10,7 @@ public class Credentials {
         credentialsMapper.put(username, password);
     }
 
+
     public boolean checkUsername(String username){
         return credentialsMapper.containsKey(username);
     }

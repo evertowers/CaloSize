@@ -4,12 +4,16 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BMIResult extends AppCompatActivity {
 
@@ -92,6 +96,34 @@ public class BMIResult extends AppCompatActivity {
                 Intent intent = new Intent(BMIResult.this, HomePageActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.dashboard);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.your_profile:
+                        startActivity(new Intent(getApplicationContext(), YourProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(), Settings.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.dashboard:
+                        startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
             }
         });
     }

@@ -181,6 +181,8 @@ public class BMIMainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.dashboard:
+                        startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                 }

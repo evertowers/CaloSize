@@ -1,6 +1,7 @@
 package com.example.calosize;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
@@ -13,11 +14,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.Map;
 
 
 public class CalorieCalculator extends AppCompatActivity {
@@ -30,7 +34,6 @@ public class CalorieCalculator extends AppCompatActivity {
     private TextView textview_label;
     private RadioGroup sexRadioGroup;
     private Spinner mySpinner;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +82,7 @@ public class CalorieCalculator extends AppCompatActivity {
                         int age = Integer.parseInt(edit_age.getText().toString());
                         double calIntake;
                         int ans;
+
 
                         double bmi = (10 * weight) + (6.25 * height) - (5 * age);
                         double fml = bmi - 161;
@@ -243,6 +247,8 @@ public class CalorieCalculator extends AppCompatActivity {
                         return true;
 
                     case R.id.dashboard:
+                        startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                 }

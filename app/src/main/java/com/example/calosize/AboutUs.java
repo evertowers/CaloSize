@@ -4,34 +4,29 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class YourProfile extends AppCompatActivity {
-
-    private TextView calIntakeResult;
-
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor sharedPreferencesEditor;
+public class AboutUs extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_your_profile);
+        setContentView(R.layout.activity_about_us);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.your_profile);
+        bottomNavigationView.setSelectedItemId(R.id.settings);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.your_profile:
+                        startActivity(new Intent(getApplicationContext(), YourProfile.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.settings:
@@ -48,6 +43,5 @@ public class YourProfile extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 }
