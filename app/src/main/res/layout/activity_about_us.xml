@@ -23,6 +23,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensans_bold"
@@ -48,20 +49,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/menu_navigation" />
 
-    <RelativeLayout
-        android:layout_width="380dp"
-        android:layout_height="550dp"
+    <ImageView
+        android:layout_width="345dp"
+        android:layout_height="485dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/calculate_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.0"></ImageView>
 
     <TextView
         android:id="@+id/tvAboutUs"
@@ -75,15 +76,13 @@
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2
-" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="318dp"
-        android:layout_height="155dp"
-
-        android:layout_marginTop="52dp"
+        android:layout_width="334dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="20dp"
         android:text="We are Computer Engineering students from Polytechnic University of the Philippines. This application is made in compliance for our Final project in Computer Engineering Technology 4."
         android:textAlignment="center"
         android:textSize="21sp"
@@ -97,13 +96,12 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
         android:text="Developers"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:layout_constraintVertical_bias="0.0" />
