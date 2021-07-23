@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background= "#6DAC4F"
+    android:background="#6DAC4F"
     app:errorEnabled="true"
     tools:context=".MainActivity">
 
@@ -13,25 +13,28 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginTop="24dp"
         app:itemBackground="@color/dark_green"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clear_text"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/menu_navigation" />
 
     <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensans_bold"
         android:text="Calorie"
         android:textColor="#EFEFE8"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.344"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +47,7 @@
         android:layout_width="47dp"
         android:layout_height="41dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +63,7 @@
         android:text="Calculator"
         android:textColor="#EFEFE8"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,40 +82,41 @@
         android:textAlignment="center"
         android:textColor="@color/black1"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.003" />
 
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="80dp"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="372dp"
+        android:layout_height="309dp"
         android:background="@drawable/calo_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.150" />
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:layout_constraintVertical_bias="0.042" />
 
     <TextView
         android:id="@+id/tvSex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_semibold"
         android:text="@string/sex"
         android:textAlignment="center"
-        android:textSize="25sp"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_semibold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.150"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.18" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -135,9 +139,9 @@
             android:fontFamily="@font/opensans_regular"
             android:text="@string/female"
             android:textAlignment="center"
-            android:textSize="20sp"
             android:textColor="@color/dark_green"
             android:textColorHint="@color/dark_green"
+            android:textSize="20sp"
             app:buttonTint="@color/dark_green" />
 
         <RadioButton
@@ -149,91 +153,67 @@
             android:fontFamily="@font/opensans_regular"
             android:text="@string/male"
             android:textAlignment="center"
-            android:textSize="20sp"
             android:textColor="@color/dark_green"
             android:textColorHint="@color/dark_green"
+            android:textSize="20sp"
             app:buttonTint="@color/dark_green" />
 
     </RadioGroup>
-
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="60dp"
-        android:background="@drawable/calo_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275">
-    </RelativeLayout>
 
     <TextView
         android:id="@+id/tvWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_semibold"
         android:text="@string/weight"
         android:textAlignment="center"
-        android:textSize="25sp"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_semibold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.280"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.283" />
 
     <EditText
         android:id="@+id/editWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:autofillHints="no"
         android:ems="8"
+        android:fontFamily="@font/opensans_regular"
         android:hint="@string/in_kilogram"
         android:inputType="number"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColorHint="@color/dark_green"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_regular"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="@color/dark_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.790"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.280"
-        android:layout_gravity="center_horizontal" />
-
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="60dp"
-        android:background="@drawable/calo_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375">
-    </RelativeLayout>
+        app:layout_constraintVertical_bias="0.267" />
 
     <TextView
         android:id="@+id/tvHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_semibold"
         android:text="@string/height"
         android:textAlignment="center"
-        android:textSize="25sp"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_semibold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.380"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.374" />
 
     <EditText
         android:id="@+id/editHeight"
@@ -246,114 +226,91 @@
         android:hint="@string/in_centimeter"
         android:inputType="number"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColorHint="@color/dark_green"
         android:textColor="@color/dark_green"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="@color/dark_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
-
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="60dp"
-        android:background="@drawable/calo_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475">
-    </RelativeLayout>
+        app:layout_constraintVertical_bias="0.362" />
 
     <TextView
         android:id="@+id/tvAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_semibold"
         android:text="@string/age"
         android:textAlignment="center"
-        android:textSize="25sp"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_semibold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <EditText
         android:id="@+id/editAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:autofillHints="no"
         android:ems="8"
+        android:fontFamily="@font/opensans_regular"
         android:hint="@string/in_years"
         android:inputType="number"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColorHint="@color/dark_green"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_regular"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="@color/dark_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
-        android:layout_gravity="center_horizontal" />
-
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="60dp"
-        android:background="@drawable/calo_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575">
-    </RelativeLayout>
+        app:layout_constraintVertical_bias="0.464" />
 
     <TextView
         android:id="@+id/tvActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_semibold"
         android:text="@string/activity"
         android:textAlignment="center"
-        android:textSize="25sp"
         android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_semibold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.556" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="220dp"
         android:layout_height="40dp"
-        android:textAlignment="center"
         android:backgroundTint="@color/dark_green"
         android:fontFamily="@font/opensans_regular"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.830"
+        app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.562" />
 
     <Button
         android:id="@+id/btCalo"
         android:layout_width="175dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
         android:background="@drawable/calculate_layout"
         android:clickable="true"
         android:focusable="true"
@@ -361,17 +318,17 @@
         android:text="@string/calculate"
         android:textAlignment="center"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.004" />
 
     <Button
         android:id="@+id/btSaveData"
-        android:layout_width="175dp"
-        android:layout_height="40dp"
+        android:layout_width="372dp"
+        android:layout_height="49dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/calculate_layout"
         android:clickable="true"
@@ -380,80 +337,85 @@
         android:text="SAVE DATA"
         android:textAlignment="center"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.880"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout7"
+        app:layout_constraintVertical_bias="0.246" />
 
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="120dp"
+    <ImageView
+        android:id="@+id/relativeLayout7"
+        android:layout_width="372dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/calo_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818">
-    </RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@+id/clear_text"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_semibold"
         android:text="@string/result"
         android:textAlignment="center"
+        android:textColor="@color/dark_green"
         android:textSize="25sp"
-        android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_semibold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:id="@+id/label"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:text="@string/label"
-        android:textSize="28sp"
-        android:textColor="@color/dark_green"
-        android:fontFamily="@font/opensans_regular"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.800"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.810"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout7"
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
         android:id="@+id/tVShow"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:textAlignment="center"
-        android:textSize="35sp"
-        android:textColor="@color/dark_green"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
         android:fontFamily="@font/opensans_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/dark_green"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.120"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.800"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/tvResult"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/opensans_regular"
+        android:text="@string/label"
+        android:textColor="@color/dark_green"
+        android:textSize="28sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.827"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult"
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
         android:id="@+id/clear_text"
-        android:layout_width="370dp"
+        android:layout_width="175dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp"
         android:background="@drawable/calculate_layout"
         android:clickable="true"
         android:focusable="true"
@@ -461,11 +423,12 @@
         android:text="@string/clear"
         android:textAlignment="center"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.910" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
