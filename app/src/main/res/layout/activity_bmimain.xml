@@ -72,10 +72,13 @@
         android:layout_width="170dp"
         android:layout_height="110dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="36dp"
         android:background="@drawable/notclicked_layout"
+        app:layout_constraintBottom_toTopOf="@+id/layout_age"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/logo_female"
@@ -107,7 +110,7 @@
         android:background="@drawable/notclicked_layout"
         app:layout_constraintBottom_toTopOf="@+id/layout_age"
         app:layout_constraintEnd_toStartOf="@+id/layout_female"
-        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -140,10 +143,10 @@
         android:layout_height="110dp"
         android:layout_below="@id/layout_male"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="32dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/rectangle_layout"
         app:layout_constraintBottom_toTopOf="@+id/layout_height"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
